@@ -1,0 +1,11 @@
+---
+applications:
+  - name: ibm-cloud-go-cf-example
+    buildpack: https://github.com/cloudfoundry/go-buildpack.git
+    command: pubapid
+    memory: 64M
+    disk_quota: 128M
+    env:
+      GOVERSION: "go1.10"
+      GOPACKAGENAME: github.com/joshblack/ibm-cloud-go-cf-example
+      GO_INSTALL_PACKAGE_SPEC: ./cmd/pubapid
